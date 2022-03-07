@@ -15,16 +15,23 @@
   <body>
     <main class="main">
       <div class="card">
+        <div class="card__box-decorative" aria-hidden="true"></div>
         <div class="card__img-container">
           <img
             src="images/illustration-woman-online-mobile.svg"
             alt=""
-            class="card__img"
+            class="card__img--mobile"
+            aria-hidden="true"
+          />
+          <img
+            src="images/illustration-woman-online-desktop.svg"
+            alt=""
+            class="card__img--desktop"
             aria-hidden="true"
           />
         </div>
-        <h1 class="card__heading">FAQ</h1>
         <section class="accordion">
+          <h1 class="card__heading">FAQ</h1>
           <h2>
             <button
               type="button"
@@ -90,9 +97,18 @@
     </main>
     <footer class="footer">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        aria-label="frontend mentor"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a
+        href="https://rpturbina.github.io"
+        target="_blank"
+        aria-label="rpturbina"
+        >rpturbina</a
+      >.
     </footer>
     <script src="src/main.js"></script>
   </body>
