@@ -1,0 +1,96 @@
+@import "modules/variables";
+@import "modules/global";
+
+.main {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient($soft-violet, $soft-blue);
+}
+
+// * Card Styling
+
+.card {
+  max-width: 327px;
+  margin: 148px 24px 85px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 22px;
+
+  &__img-container {
+    margin-top: -50%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    padding-bottom: 10px;
+    background-image: url(../images/illustration-woman-online-mobile.svg),
+      url(../images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: top center, bottom center;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    visibility: hidden;
+  }
+
+  &__heading {
+    color: $very-dark-desaturated-blue;
+    font-size: 32px;
+    font-weight: $bold-font-weight;
+    text-align: center;
+    margin: 15px auto;
+  }
+}
+
+// * Accordion Styling
+
+.accordion {
+  &__button {
+    display: flex;
+    padding: 17px 0 12px;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    color: $very-dark-grayish-blue;
+
+    &::after {
+      content: url("../images/icon-arrow-down.svg");
+      margin-left: auto;
+    }
+
+    &:hover {
+      color: $soft-red;
+    }
+
+    &:not(.collapsed) {
+      font-weight: $bold-font-weight;
+      color: $very-dark-desaturated-blue;
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__body {
+    padding-bottom: 20px;
+    padding-right: 16px;
+    font-size: 12px;
+    line-height: 18px;
+    color: $dark-grayish-blue;
+    border-bottom: 1px solid $light-grayish-blue;
+  }
+}
+
+// * Footer Styling
+.footer {
+  display: none;
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
