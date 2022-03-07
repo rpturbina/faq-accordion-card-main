@@ -1,5 +1,6 @@
 @import "modules/variables";
 @import "modules/global";
+@import "modules/transition";
 
 .main {
   display: flex;
@@ -50,22 +51,32 @@
 .accordion {
   &__button {
     display: flex;
-    padding: 17px 0 12px;
-    position: relative;
+    align-items: center;
+    padding: 17px 0;
     width: 100%;
     text-align: left;
+    background-color: #fff;
     color: $very-dark-grayish-blue;
+    @include transition(
+      $duration,
+      $timing-function,
+      padding-bottom,
+      font-weight,
+      color
+    );
 
     &::after {
       content: url("../images/icon-arrow-down.svg");
       margin-left: auto;
+      @include transition($duration, $timing-function, transform);
     }
 
     &:hover {
       color: $soft-red;
     }
 
-    &:not(.collapsed) {
+    &:not(.accordion__button--collapsed) {
+      padding-bottom: 12px;
       font-weight: $bold-font-weight;
       color: $very-dark-desaturated-blue;
 
@@ -76,12 +87,26 @@
   }
 
   &__body {
-    padding-bottom: 20px;
+    max-height: 0;
     padding-right: 16px;
+    overflow: hidden;
+    color: transparent;
     font-size: 12px;
     line-height: 18px;
-    color: $dark-grayish-blue;
     border-bottom: 1px solid $light-grayish-blue;
+    @include transition(
+      $duration,
+      $timing-function,
+      max-height,
+      padding-bottom,
+      color
+    );
+
+    &--show {
+      max-height: 100px;
+      padding-bottom: 20px;
+      color: $dark-grayish-blue;
+    }
   }
 }
 
