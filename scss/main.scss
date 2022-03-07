@@ -131,6 +131,11 @@
     color: $light-grayish-blue;
     font-weight: $bold-font-weight;
     letter-spacing: 0.1px;
+    transition: color $duration $timing-function;
+
+    &:hover {
+      color: $soft-red;
+    }
   }
 }
 
