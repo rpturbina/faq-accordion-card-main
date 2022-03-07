@@ -1,5 +1,4 @@
 const accordionButtons = document.querySelectorAll(".accordion__button");
-console.log(accordionButtons);
 
 accordionButtons.forEach((accordionButton) => {
   accordionButton.addEventListener("click", (event) => {
