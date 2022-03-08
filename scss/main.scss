@@ -18,6 +18,7 @@
   padding: 25px;
   background-color: #fff;
   border-radius: 22px;
+  box-shadow: 0 25px 40px 0px rgba(0, 0, 0, 0.25);
   @include transition($duration, $timing-function, max-width, margin);
 
   &__img-container {
@@ -64,19 +65,12 @@
     text-align: left;
     background-color: #fff;
     color: $very-dark-grayish-blue;
-    @include transition(
-      0.3s,
-      $timing-function,
-      padding-bottom,
-      font-size,
-      font-weight,
-      color
-    );
+    @include transition($duration, $timing-function, all);
 
     &::after {
       content: url("../images/icon-arrow-down.svg");
       margin-left: auto;
-      @include transition($duration, $timing-function, transform, margin-right);
+      @include transition($duration, $timing-function, all);
     }
 
     &:hover {
@@ -98,22 +92,15 @@
     max-height: 0;
     padding-right: 16px;
     overflow: hidden;
-    color: transparent;
+    color: $very-dark-grayish-blue;
     font-size: 12px;
     line-height: 18px;
     border-bottom: 1px solid $light-grayish-blue;
-    @include transition(
-      $duration,
-      $timing-function,
-      max-height,
-      padding-bottom,
-      color
-    );
+    @include transition($duration, $timing-function, all);
 
     &--show {
       max-height: 100px;
       padding-bottom: 20px;
-      color: $very-dark-grayish-blue;
     }
   }
 }
