@@ -47,8 +47,8 @@ button {
   border-radius: 22px;
   -webkit-box-shadow: 0 25px 40px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0 25px 40px 0px rgba(0, 0, 0, 0.25);
-  -webkit-transition-property: max-width, margin;
-  transition-property: max-width, margin;
+  -webkit-transition-property: all;
+  transition-property: all;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   -webkit-transition-timing-function: ease;
